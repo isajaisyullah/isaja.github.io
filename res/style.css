@@ -1,0 +1,96 @@
+.navbarcon {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  display: flex;
+}
+.name{
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  background-color: limegreen;
+}
+.active {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+.time{
+  text-align: center;
+}
+.active:hover {
+  background-color: limegreen;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.title{
+  align-items: center;
+  text-align: center;
+  background-color: turquoise;
+  display: flex;
+}
+
+body {
+  background-color: #EEEEEE;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1{
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.content {
+  display: block;
+  width: 70%;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: white;
+  margin: auto;
+  margin-top: 10px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.image_1 {
+    float: left; 
+    width: 200px;
+    max-height: 250px;
+    object-position: center;
+    margin: auto;
+}
+.image_2{
+  width: 200px;
+  max-height: 250px;
+  padding: 25px;
+}
+
+.opening {
+  margin: 10px;
+  text-align: center;
+  padding: auto;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    background-color: white;
+}
+
+.link{
+  text-align: center;
+}
