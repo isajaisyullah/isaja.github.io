@@ -11,18 +11,12 @@ class Timer {
 
     this.interval = null;
     this.remainingSeconds = 0;
-// Select timeout Audio element
-	const timeoutAudio = document.getElementById("timeout_audio");
 
-	// Initialize timeout sound
-	timeoutAudio.src = "end.mp3";
-	timeoutAudio.load();
 	  
     this.el.control.addEventListener("click", () => {
       if (this.interval === null) {
         this.start();
       } else {
-	      	timeoutAudio.play();
         this.stop();
       }
     });
@@ -34,10 +28,14 @@ class Timer {
         this.stop();
         this.remainingSeconds = inputMinutes * 60;
         this.updateInterfaceTime();
+	      if(this.remainingSeconds === 0){
+	      // Select timeout Audio element
+		var audio = new Audio('end.mp3');
+		audio.play();
+	      }
       }
     });
   }
-	
 
   updateInterfaceTime() {
     const minutes = Math.floor(this.remainingSeconds / 60);
