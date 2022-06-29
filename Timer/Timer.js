@@ -1,12 +1,7 @@
 class Timer {
   constructor(root) {
     root.innerHTML = Timer.getHTML();
-// Select timeout Audio element
-	const timeoutAudio = document.getElementById("timeout_audio");
 
-	// Initialize timeout sound
-	timeoutAudio.src = "end.mp3";
-	timeoutAudio.load();
     this.el = {
       minutes: root.querySelector(".timer__part--minutes"),
       seconds: root.querySelector(".timer__part--seconds"),
@@ -16,7 +11,13 @@ class Timer {
 
     this.interval = null;
     this.remainingSeconds = 0;
+// Select timeout Audio element
+	const timeoutAudio = document.getElementById("timeout_audio");
 
+	// Initialize timeout sound
+	timeoutAudio.src = "end.mp3";
+	timeoutAudio.load();
+	  
     this.el.control.addEventListener("click", () => {
       if (this.interval === null) {
         this.start();
