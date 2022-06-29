@@ -60,7 +60,9 @@ class Timer {
 	    var beep = new Audio('beep.mp3');
 	beep.play();
 
-      if (this.remainingSeconds === 0) {	     
+      if (this.remainingSeconds === 0) {
+	      var audio = new Audio('end.mp3');
+	audio.play();
         this.stop();
       }
     }, 1000);
@@ -69,8 +71,7 @@ class Timer {
   }
 
   stop() {
-	var audio = new Audio('end.mp3');
-	audio.play();
+	
     clearInterval(this.interval);
 
     this.interval = null;
