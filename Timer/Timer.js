@@ -60,8 +60,6 @@ class Timer {
 
       if (this.remainingSeconds === 0) {	     
         this.stop();
-	var audio = new Audio('end.mp3');
-	audio.play();
       }
     }, 1000);
 
@@ -69,6 +67,8 @@ class Timer {
   }
 
   stop() {
+	var audio = new Audio('end.mp3');
+	audio.play();
     clearInterval(this.interval);
 
     this.interval = null;
