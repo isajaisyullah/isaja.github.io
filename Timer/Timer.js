@@ -57,6 +57,8 @@ class Timer {
     this.interval = setInterval(() => {
       this.remainingSeconds--;
       this.updateInterfaceTime();
+	    var beep = new Audio('beep.mp3');
+	beep.play();
 
       if (this.remainingSeconds === 0) {	     
         this.stop();
