@@ -46,8 +46,7 @@ class Timer {
       this.el.control.innerHTML = `<span class="material-icons">play_arrow</span>`;
       this.el.control.classList.add("timer__btn--start");
       this.el.control.classList.remove("timer__btn--stop");
-	  var audio = new Audio('beep.mp3');
-	  audio.play();
+
     } else {
       this.el.control.innerHTML = `<span class="material-icons">pause</span>`;
       this.el.control.classList.add("timer__btn--stop");
@@ -75,6 +74,8 @@ class Timer {
     clearInterval(this.interval);
 
     this.interval = null;
+	  	  var audio = new Audio('beep.mp3');
+	  audio.play();
 
     this.updateInterfaceControls();
   }
