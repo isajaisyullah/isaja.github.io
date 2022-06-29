@@ -74,8 +74,6 @@ class Timer {
     clearInterval(this.interval);
 
     this.interval = null;
-	  	  var audio = new Audio('beep.mp3');
-	  audio.play();
 
     this.updateInterfaceControls();
   }
