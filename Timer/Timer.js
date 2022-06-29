@@ -28,10 +28,6 @@ class Timer {
         this.stop();
         this.remainingSeconds = inputMinutes * 60;
         this.updateInterfaceTime();
-	      if(this.remainingSeconds === 0){
-	      var audio = new Audio('end.mp3');
-		      audio.play();
-	      }
       }
     });
   }
@@ -43,6 +39,8 @@ class Timer {
 
     this.el.minutes.textContent = minutes.toString().padStart(2, "0");
     this.el.seconds.textContent = seconds.toString().padStart(2, "0");
+	  var audio = new Audio('beep.mp3');
+	  audio.play();
   }
 
   updateInterfaceControls() {
