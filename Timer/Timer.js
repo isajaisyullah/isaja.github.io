@@ -28,11 +28,6 @@ class Timer {
         this.stop();
         this.remainingSeconds = inputMinutes * 60;
         this.updateInterfaceTime();
-	      if(this.remainingSeconds === 0){
-	      // Select timeout Audio element
-		var audio = new Audio('end.mp3');
-		audio.play();
-	      }
       }
     });
   }
