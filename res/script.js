@@ -32,3 +32,10 @@ questions.forEach(function (question) {
     question.classList.toggle("show-text");
   });
 });
+
+import Timer from "./Timer.js";
+
+new Timer(
+    document.querySelector(".timer")
+);
+    
