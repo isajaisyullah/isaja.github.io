@@ -1,34 +1,145 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+<head>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="res/style.css">
+	<!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <!-- extra fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+	<nav>
+		<div class="nav-center">
+			<h4>Final Project</h4>
+			<ul class="nav-links">
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="Timer\index.html">Timer</a>
+				</li>
+				<li>
+					<a id="btn">Backgroud Color</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 
-    <link rel="stylesheet" href="res\style.css">
-  </head>
+	<section class="container">
+        <!-- review -->
+        <article class="review">
+        	<div class="titlerev">
+          <h2>our Teams</h2>
+          <div class="underline"></div>
+        </div>
+          <div class="img-container">
+            <img src="person.png" id="person-img" alt="" />
+          </div>
+          <h4 id="name">sara jones</h4>
+          <p id="nim">ux designer</p>
+          <p id="info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            asperiores debitis incidunt, eius earum ipsam cupiditate libero?
+            Iste, doloremque nihil?
+          </p>
+          <!-- prev next buttons-->
+          <div class="button-container">
+            <button class="prev-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="next-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </article>
+      </section>
 
-  <body>
-  	<div>
-  		<ul class="navbarcon">
-  		  <li class="name"><strong>Isa Jaisyullah Hamid</strong></li>
-  		  <li class="active"><a href="index.html">Home</a></li>
-  		  <li class="active"><a href="biodata.html">Biodata</a></li>
-  		  <li class="active"><a href="about.html">About me</a></li>
-  		  <li class="active"><a href="hobby.html">Hobby</a></li>
-	 </ul>
-  	</div>
-	<div class="title">
-		<h1>Home Page</h1>
-	</div>
-  <p id="tanggal" class="time"></p>
-  <div class="content">
-      <img src="res\pict\photo1.jpg" class="image_1" alt="about">
-      <p class="opening">
-        Halo semuanya, Perkenalkan nama saya Isa Jaisyullah Hamid, biasa dipanggil Isa atau Jae, saya sekarang sedang menempuh pendidikan kuliah di Universitas Muhammadiyah Yogyakarta jurusan Teknologi Informasi. Tidak ada hal yang menarik dari saya jadi yaudah
-      </p>                    
-  </div>
+		<section class="questions">
+	        <!-- title -->
+	        <div class="title">
+	          <h2 style="margin-bottom: 40px;">Sebelum ditanya kami jawab</h2>
+	        </div>
+	        <!-- questions -->
+	        <div class="section-center">
+	          <!-- single question -->
+	          <article class="question">
+	            <!-- question title -->
+	            <div class="question-title">
+	              <p>Kenapa cuma berdua?</p>
+	              <button type="button" class="question-btn">
+	                <span class="plus-icon">
+	                  <i class="far fa-plus-square"></i>
+	                </span>
+	                <span class="minus-icon">
+	                  <i class="far fa-minus-square"></i>
+	                </span>
+	              </button>
+	            </div>
+	            <!-- question text -->
+	            <div class="question-text">
+	              <p>
+	                Karena biasanya yang ke tiga itu setan, eh maksud kami ga ketemu anggota lainnya.
+	              </p>
+	            </div>
+	          </article>
+	          <!-- end of single question -->
+	          <!-- single question -->
+	          <article class="question">
+	            <!-- question title -->
+	            <div class="question-title">
+	              <p>Apa kalian rajin menabung?</p>
+	              <button type="button" class="question-btn">
+	                <span class="plus-icon">
+	                  <i class="far fa-plus-square"></i>
+	                </span>
+	                <span class="minus-icon">
+	                  <i class="far fa-minus-square"></i>
+	                </span>
+	              </button>
+	            </div>
+	            <!-- question text -->
+	            <div class="question-text">
+	              <p>
+	                Tentu saja, tapi ga pernah pakai celengan babi sih, takutnya jadi uang haram, hehe.
+	              </p>
+	            </div>
+	          </article>
+	          <!-- end of single question -->
+	          <!-- single question -->
+	          <article class="question">
+	            <!-- question title -->
+	            <div class="question-title">
+	              <p>Apa kalian punya pacar?</p>
+	              <!-- button -->
+	              <button type="button" class="question-btn">
+	                <span class="plus-icon">
+	                  <i class="far fa-plus-square"></i>
+	                </span>
+	                <span class="minus-icon">
+	                  <i class="far fa-minus-square"></i>
+	                </span>
+	              </button>
+	            </div>
+	            <!-- question text -->
+	            <div class="question-text">
+	              <p>
+	                Tentu saja tidak. Kenapa? "karena kita ga punya uang" *sfx bp. Prabowo sound :V
+	              </p>
+	            </div>
+	          </article>
+	          <!-- end of single question -->
+	      </section>
+	
 
-  <script type="text/javascript" src="res\script.js"></script>
-  </body>
+
+	<!-- javascript -->
+	<script type="text/javascript" src="res/script.js"></script>
+	<script type="text/javascript" src="res/team.js"></script>
+</body>
 </html>
