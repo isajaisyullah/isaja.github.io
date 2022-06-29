@@ -1,7 +1,12 @@
 class Timer {
   constructor(root) {
     root.innerHTML = Timer.getHTML();
+// Select timeout Audio element
+	const timeoutAudio = document.getElementById("timeout_audio");
 
+	// Initialize timeout sound
+	timeoutAudio.src = "end.mp3";
+	timeoutAudio.load();
     this.el = {
       minutes: root.querySelector(".timer__part--minutes"),
       seconds: root.querySelector(".timer__part--seconds"),
@@ -16,6 +21,7 @@ class Timer {
       if (this.interval === null) {
         this.start();
       } else {
+	      	timeoutAudio.play();
         this.stop();
       }
     });
@@ -30,12 +36,7 @@ class Timer {
       }
     });
   }
-	// Select timeout Audio element
-	const timeoutAudio = document.getElementById("timeout_audio");
-
-	// Initialize timeout sound
-	timeoutAudio.src = "end.mp3";
-	timeoutAudio.load();
+	
 
   updateInterfaceTime() {
     const minutes = Math.floor(this.remainingSeconds / 60);
@@ -65,7 +66,6 @@ class Timer {
       this.updateInterfaceTime();
 
       if (this.remainingSeconds === 0) {
-	timeoutAudio.play();
         this.stop();
       }
     }, 1000);
