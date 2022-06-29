@@ -12,7 +12,6 @@ class Timer {
     this.interval = null;
     this.remainingSeconds = 0;
 
-	  
     this.el.control.addEventListener("click", () => {
       if (this.interval === null) {
         this.start();
@@ -31,7 +30,6 @@ class Timer {
       }
     });
   }
-}
 
   updateInterfaceTime() {
     const minutes = Math.floor(this.remainingSeconds / 60);
@@ -46,7 +44,6 @@ class Timer {
       this.el.control.innerHTML = `<span class="material-icons">play_arrow</span>`;
       this.el.control.classList.add("timer__btn--start");
       this.el.control.classList.remove("timer__btn--stop");
-
     } else {
       this.el.control.innerHTML = `<span class="material-icons">pause</span>`;
       this.el.control.classList.add("timer__btn--stop");
@@ -70,7 +67,6 @@ class Timer {
   }
 
   stop() {
-	
     clearInterval(this.interval);
 
     this.interval = null;
