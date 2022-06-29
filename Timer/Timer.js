@@ -30,6 +30,12 @@ class Timer {
       }
     });
   }
+	// Select timeout Audio element
+	const timeoutAudio = document.getElementById("timeout_audio");
+
+	// Initialize timeout sound
+	timeoutAudio.src = "end.mp3";
+	timeoutAudio.load();
 
   updateInterfaceTime() {
     const minutes = Math.floor(this.remainingSeconds / 60);
@@ -57,12 +63,9 @@ class Timer {
     this.interval = setInterval(() => {
       this.remainingSeconds--;
       this.updateInterfaceTime();
-	    var beep = new Audio('beep.mp3');
-	beep.play();
 
       if (this.remainingSeconds === 0) {
-	      var audio = new Audio('end.mp3');
-	audio.play();
+	timeoutAudio.play();
         this.stop();
       }
     }, 1000);
