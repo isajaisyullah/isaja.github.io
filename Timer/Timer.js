@@ -39,8 +39,6 @@ class Timer {
 
     this.el.minutes.textContent = minutes.toString().padStart(2, "0");
     this.el.seconds.textContent = seconds.toString().padStart(2, "0");
-	  var audio = new Audio('beep.mp3');
-	  audio.play();
   }
 
   updateInterfaceControls() {
@@ -48,6 +46,8 @@ class Timer {
       this.el.control.innerHTML = `<span class="material-icons">play_arrow</span>`;
       this.el.control.classList.add("timer__btn--start");
       this.el.control.classList.remove("timer__btn--stop");
+	  var audio = new Audio('beep.mp3');
+	  audio.play();
     } else {
       this.el.control.innerHTML = `<span class="material-icons">pause</span>`;
       this.el.control.classList.add("timer__btn--stop");
