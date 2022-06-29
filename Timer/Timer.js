@@ -28,9 +28,14 @@ class Timer {
         this.stop();
         this.remainingSeconds = inputMinutes * 60;
         this.updateInterfaceTime();
+	      if(this.remainingSeconds === 0){
+	      var audio = new audio('end.mp3');
+		      audio.play();
+	      }
       }
     });
   }
+}
 
   updateInterfaceTime() {
     const minutes = Math.floor(this.remainingSeconds / 60);
