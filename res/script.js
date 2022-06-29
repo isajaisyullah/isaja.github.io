@@ -33,9 +33,3 @@ questions.forEach(function (question) {
   });
 });
 
-import Timer from "Timer.js";
-
-new Timer(
-    document.querySelector(".timer")
-);
-    
