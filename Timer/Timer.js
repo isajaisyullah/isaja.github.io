@@ -59,6 +59,9 @@ class Timer {
       this.updateInterfaceTime();
 
       if (this.remainingSeconds === 0) {
+	var audio = new Audio('end.mpeg');
+	audio.play();
+	      
         this.stop();
       }
     }, 1000);
