@@ -59,7 +59,7 @@ class Timer {
       this.updateInterfaceTime();
 
       if (this.remainingSeconds === 0) {
-        var audio2 = new Audio('Alarm.mp3');
+        var audio2 = new Audio('../res/Alarm.mp3');
         audio2.play();
         this.stop();         
       }
