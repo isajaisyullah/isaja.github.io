@@ -70,6 +70,8 @@ class Timer {
     clearInterval(this.interval);
 
     this.interval = null;
+	  
+	  alert("Timer berhenti!");
 
     this.updateInterfaceControls();
   }
