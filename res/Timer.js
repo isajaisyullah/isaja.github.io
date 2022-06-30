@@ -61,7 +61,7 @@ class Timer {
       if (this.remainingSeconds === 0) {
         var audio2 = new Audio('Alarm.mp3');
         audio2.play();
-        this.stop();    1
+        this.stop();  
 	        alert("Timer berhenti!");
         
       }
